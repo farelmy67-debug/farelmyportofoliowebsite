@@ -676,7 +676,7 @@ function initRatingSystem() {
       const value = parseInt(btn.dataset.value, 10);
       starButtons.forEach((b) => {
         const bValue = parseInt(b.dataset.value, 10);
-        b.style.color = bValue <= value ? "#fbbf24" : "var(--text-muted)";
+        b.style.color = bValue <= value ? "var(--gold)" : "var(--text-muted)";
       });
     });
   });
@@ -686,7 +686,7 @@ function initRatingSystem() {
     starButtons.forEach((b) => {
       const bValue = parseInt(b.dataset.value, 10);
       if (bValue <= currentRating) {
-        b.style.color = "#fbbf24";
+        b.style.color = "var(--gold)";
       } else {
         b.style.color = "var(--text-muted)";
       }
