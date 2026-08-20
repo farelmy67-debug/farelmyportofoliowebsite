@@ -2,21 +2,26 @@
    DESIGN TOKENS
    ========================================================= */
 :root {
-  --bg-base: #0b0e14;
-  --bg-raised: #12161f;
-  --bg-card: #161b26;
-  --text-primary: #f5f3ee;
-  --text-muted: #a6adba;
-  --text-faint: #6b7280;
-  --border-soft: rgba(245, 243, 238, 0.08);
-  --border-strong: rgba(245, 243, 238, 0.16);
+  --bg-base: #05070d;
+  --bg-raised: #0a1120;
+  --bg-card: #0d1526;
+  --text-primary: #ffffff;
+  --text-muted: #adbcd4;
+  --text-faint: #7c8aa3;
+  --border-soft: rgba(212, 175, 90, 0.16);
+  --border-strong: rgba(212, 175, 90, 0.4);
 
-  --accent-admin: #4c7ea8;
-  --accent-admin-soft: rgba(76, 126, 168, 0.16);
-  --accent-data: #e8783a;
-  --accent-data-soft: rgba(232, 120, 58, 0.16);
-  --accent-marketing: #3fa687;
-  --accent-marketing-soft: rgba(63, 166, 135, 0.16);
+  --gold: #d4af5a;
+  --gold-soft: rgba(212, 175, 90, 0.14);
+  --gold-strong: #e6c477;
+  --blue: #3f7fd6;
+  --blue-soft: rgba(63, 127, 214, 0.14);
+  --accent-admin: #3f7fd6;
+  --accent-admin-soft: rgba(63, 127, 214, 0.16);
+  --accent-data: #d4af5a;
+  --accent-data-soft: rgba(212, 175, 90, 0.16);
+  --accent-marketing: #7fb2f0;
+  --accent-marketing-soft: rgba(127, 178, 240, 0.16);
 
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -41,7 +46,7 @@ body {
   margin: 0;
   background: var(--bg-base);
   background-image:
-    linear-gradient(rgba(11, 14, 20, 0.72), rgba(11, 14, 20, 0.78)),
+    linear-gradient(rgba(5, 7, 13, 0.86), rgba(6, 12, 26, 0.9)),
     url("../assets/background/Background.jpg");
   background-position: center;
   background-size: cover;
@@ -64,7 +69,7 @@ body.page-ready {
   display: grid;
   place-items: center;
   background:
-    linear-gradient(rgba(9, 13, 19, 0.25), rgba(9, 13, 19, 0.28)),
+    linear-gradient(rgba(5, 7, 13, 0.62), rgba(6, 12, 26, 0.72)),
     url("../assets/background/firstpage.jpg") center/cover no-repeat;
   transition: opacity 0.75s ease, visibility 0.75s ease;
 }
@@ -78,14 +83,14 @@ body.page-ready {
 .firstpage-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(7, 11, 18, 0.18);
+  background: rgba(5, 7, 13, 0.35);
 }
 
 .firstpage-card {
   position: relative;
   z-index: 1;
   width: min(560px, calc(100vw - 40px));
-  background: rgba(14, 18, 26, 0.42);
+  background: rgba(8, 13, 24, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 28px;
   backdrop-filter: blur(8px);
@@ -108,7 +113,7 @@ body.page-ready {
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1.1;
   letter-spacing: -0.04em;
-  color: #f5f3ee;
+  color: var(--text-primary);
 }
 
 .firstpage-subtitle {
@@ -122,20 +127,20 @@ body.page-ready {
 .enter-btn {
   border: 0;
   border-radius: 999px;
-  background: linear-gradient(135deg, #d9f0ff, #9ed3ff);
-  color: #0e1724;
+  background: linear-gradient(135deg, #e6c477, #c39a3f);
+  color: #05070d;
   padding: 14px 28px;
   font-weight: 800;
   font-size: 0.96rem;
   letter-spacing: 0.04em;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 12px 28px rgba(158, 211, 255, 0.35);
+  box-shadow: 0 12px 28px rgba(212, 175, 90, 0.32);
 }
 
 .enter-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 32px rgba(158, 211, 255, 0.45);
+  box-shadow: 0 18px 32px rgba(212, 175, 90, 0.45);
 }
 
 img {
@@ -165,7 +170,7 @@ button {
 
 body.page-ready .page-shell {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* =========================================================
@@ -241,7 +246,7 @@ body.page-ready .page-shell {
 }
 
 .more-about-panel {
-  background: rgba(18, 22, 31, 0.8);
+  background: rgba(10, 17, 32, 0.82);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 24px 20px 18px;
@@ -680,7 +685,7 @@ body.panel-open {
 .bar-fill {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--accent-data), #f4a15f);
+  background: linear-gradient(90deg, #c39a3f, #e6c477);
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -726,7 +731,7 @@ body.panel-open {
   max-width: 900px;
   margin: 0 auto 36px;
   background: var(--accent-marketing-soft);
-  border: 1px solid rgba(63, 166, 135, 0.3);
+  border: 1px solid rgba(127, 178, 240, 0.3);
   border-radius: var(--radius-md);
   padding: 26px 24px;
 }
@@ -811,7 +816,7 @@ body.panel-open {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(11, 14, 20, 0.7);
+  background: rgba(5, 7, 13, 0.72);
   border: 1px solid var(--border-strong);
   color: var(--text-primary);
   width: 40px;
@@ -1055,14 +1060,14 @@ body.panel-open {
 }
 
 .footer-btn.whatsapp {
-  color: #25d366;
-  background: rgba(37, 211, 102, 0.1);
-  border-color: rgba(37, 211, 102, 0.35);
+  color: var(--accent-marketing);
+  background: rgba(127, 178, 240, 0.1);
+  border-color: rgba(127, 178, 240, 0.35);
 }
 
 .footer-btn.whatsapp:hover {
-  background: rgba(37, 211, 102, 0.18);
-  border-color: #25d366;
+  background: rgba(127, 178, 240, 0.18);
+  border-color: var(--accent-marketing);
 }
 
 .footer-btn.email {
@@ -1076,14 +1081,14 @@ body.panel-open {
 }
 
 .footer-btn.instagram {
-  color: #e1306c;
-  background: rgba(225, 48, 108, 0.1);
-  border-color: rgba(225, 48, 108, 0.35);
+  color: var(--gold);
+  background: rgba(212, 175, 90, 0.1);
+  border-color: rgba(212, 175, 90, 0.35);
 }
 
 .footer-btn.instagram:hover {
-  background: rgba(225, 48, 108, 0.18);
-  border-color: #e1306c;
+  background: rgba(212, 175, 90, 0.18);
+  border-color: var(--gold);
 }
 
 .instagram-popover {
@@ -1121,7 +1126,7 @@ body.panel-open {
 }
 
 .instagram-popover a {
-  color: #e1306c;
+  color: var(--gold);
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
@@ -1159,7 +1164,7 @@ body.panel-open {
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(6, 8, 12, 0.92);
+  background: rgba(3, 5, 10, 0.94);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1206,7 +1211,7 @@ body.panel-open {
   position: fixed;
   inset: 0;
   z-index: 210;
-  background: rgba(6, 8, 12, 0.94);
+  background: rgba(3, 5, 10, 0.96);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1341,7 +1346,7 @@ body.panel-open {
 
 .star-rating .star:hover,
 .star-rating .star.active {
-  color: #fbbf24;
+  color: var(--gold);
   transform: scale(1.15);
 }
 
@@ -1352,7 +1357,7 @@ body.panel-open {
 }
 
 .rating-display.selected {
-  color: #fbbf24;
+  color: var(--gold);
   font-weight: 500;
 }
 
@@ -1417,7 +1422,7 @@ body.panel-open {
 }
 
 .submit-btn:hover {
-  background: #1f2937;
+  background: var(--bg-raised);
   transform: translateY(-2px);
 }
 
@@ -1471,7 +1476,7 @@ body.panel-open {
 
 .rating-stars {
   font-size: 1.1rem;
-  color: #fbbf24;
+  color: var(--gold);
   letter-spacing: 2px;
 }
 
