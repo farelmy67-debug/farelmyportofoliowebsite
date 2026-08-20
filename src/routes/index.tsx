@@ -44,5 +44,11 @@ function Portfolio() {
     };
   }, []);
 
-  return <div id="portfolio-root" dangerouslySetInnerHTML={{ __html: bodyHtml }} />;
+  return (
+    <div
+      id="portfolio-root"
+      suppressHydrationWarning
+      dangerouslySetInnerHTML={{ __html: bodyHtml }}
+    />
+  );
 }
