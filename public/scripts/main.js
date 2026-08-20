@@ -19,11 +19,17 @@ if (pageShell) {
   pageShell.setAttribute("aria-hidden", "true");
 }
 
-window.addEventListener("load", () => {
+const scheduleAutoReveal = () => {
   setTimeout(() => {
     revealPortfolio();
   }, 2600);
-});
+};
+
+if (document.readyState === "complete") {
+  scheduleAutoReveal();
+} else {
+  window.addEventListener("load", scheduleAutoReveal);
+}
 
 const ADMIN_CERTIFICATES = [
   { file: "01-Sertifikat BNSP Farel Maulana Yusuf.jpeg", label: "Sertifikat Kompetensi BNSP, Staf Administrasi Profesional" },
