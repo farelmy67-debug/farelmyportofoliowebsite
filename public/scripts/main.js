@@ -54,6 +54,11 @@ const DATA_CERTIFICATES = [
   { file: "05-tableau-workshop.jpg", label: "Sertifikat Workshop Tableau, Zenith Academy" }
 ];
 
+const MARKETING_CERTIFICATES = [
+  { file: "01-paradaya-movement-sertifikat.jpg", label: "Sertifikat Pelatihan Digital Marketing & SEO, Paradaya Movement" },
+  { file: "02-proxsis-internship-surat.jpg", label: "Surat Keterangan Digital Marketing SEO Internship, PT Proxsis Mark" }
+];
+
 const DOCUMENTATION_GALLERY = {
   "teach-for-indonesia": [
     { src: "assets/dokumentasi/Dokumentasi Binus 1.jpeg", label: "Dokumentasi Binus 1" },
@@ -83,6 +88,7 @@ const OTHER_CERTIFICATES = [
 
 const ADMIN_CERT_PATH = "assets/admin/certificates/";
 const DATA_CERT_PATH = "assets/data-science/certificates/";
+const MARKETING_CERT_PATH = "assets/digital-marketing/certificates/";
 const OTHER_CERT_PATH = "assets/other-certificates/";
 
 // =========================================================
@@ -160,6 +166,7 @@ function renderCredentialGrid(containerId, certList, basePath) {
 
 renderCredentialGrid("admin-certificates", ADMIN_CERTIFICATES, ADMIN_CERT_PATH);
 renderCredentialGrid("data-certificates", DATA_CERTIFICATES, DATA_CERT_PATH);
+renderCredentialGrid("marketing-credentials", MARKETING_CERTIFICATES, MARKETING_CERT_PATH);
 renderCredentialGrid("other-certificates", OTHER_CERTIFICATES, OTHER_CERT_PATH);
 
 const moreAboutBtn = document.querySelector(".more-about-btn");
@@ -801,3 +808,39 @@ document.querySelectorAll(".card-media img").forEach((img) => {
     img.closest(".card-media").classList.add("missing-image");
   });
 });
+
+// =========================================================
+// INTERSECTION OBSERVER UNTUK SCROLL-TRIGGERED ANIMATIONS
+// =========================================================
+function initScrollAnimations() {
+  if (!("IntersectionObserver" in window)) return;
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Trigger animations untuk elemen yang baru terlihat
+        entry.target.style.animationPlayState = "running";
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe sections dan cards yang punya animation
+  document.querySelectorAll(
+    ".hero, .role-grid, .role-card, .side-roles, .side-role, .credential-section, .site-footer"
+  ).forEach((el) => {
+    observer.observe(el);
+  });
+}
+
+// Initialize scroll animations saat DOM siap
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initScrollAnimations);
+} else {
+  initScrollAnimations();
+}
