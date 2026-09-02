@@ -51,12 +51,16 @@ const DATA_CERTIFICATES = [
   { file: "02-performance-report.jpg", label: "Performance Report, Intelligo.ID" },
   { file: "03-data-analysis-fundamental.jpg", label: "Sertifikat Data Analysis Fundamental, MySkill" },
   { file: "04-data-visualization-excel.jpg", label: "Sertifikat Data Visualization with Excel, MySkill" },
-  { file: "05-tableau-workshop.jpg", label: "Sertifikat Workshop Tableau, Zenith Academy" }
+  { file: "05-tableau-workshop.jpg", label: "Sertifikat Workshop Tableau, Zenith Academy" },
+  { file: "06-data-science-06.jpg", label: "Sertifikat Data Science #06" }
 ];
 
 const MARKETING_CERTIFICATES = [
   { file: "01-paradaya-movement-sertifikat.jpg", label: "Sertifikat Pelatihan Digital Marketing & SEO, Paradaya Movement" },
-  { file: "02-proxsis-internship-surat.jpg", label: "Surat Keterangan Digital Marketing SEO Internship, PT Proxsis Mark" }
+  { file: "02-proxsis-internship-surat.jpg", label: "Surat Keterangan Digital Marketing SEO Internship, PT Proxsis Mark" },
+  { file: "03-dibimbing.jpg", label: "Sertifikat diBimbing" },
+  { file: "04-loveable-ai-myskill.jpg", label: "Sertifikat Lovable AI MySkill" },
+  { file: "05-web-english.jpg", label: "Sertifikat Web English" }
 ];
 
 const DOCUMENTATION_GALLERY = {
@@ -88,7 +92,7 @@ const OTHER_CERTIFICATES = [
 
 const ADMIN_CERT_PATH = "assets/admin/certificates/";
 const DATA_CERT_PATH = "assets/data-science/certificates/";
-const MARKETING_CERT_PATH = "assets/digital-marketing/certificates/";
+const MARKETING_CERT_PATH = "assets/digital-marketing/";
 const OTHER_CERT_PATH = "assets/other-certificates/";
 
 // =========================================================
