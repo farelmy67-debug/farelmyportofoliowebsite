@@ -104,6 +104,16 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Google tag (gtag.js) - Placed first as per Google Analytics guidelines */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1TV5HR5SX4"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-1TV5HR5SX4');`,
+          }}
+        />
         <HeadContent />
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-1TV5HR5SX4"></script>
