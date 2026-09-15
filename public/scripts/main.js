@@ -51,7 +51,7 @@ const DATA_CERTIFICATES = [
   { file: "02-performance-report.jpg", label: "Performance Report, Intelligo.ID" },
   { file: "03-data-analysis-fundamental.jpg", label: "Sertifikat Data Analysis Fundamental, MySkill" },
   { file: "04-data-visualization-excel.jpg", label: "Sertifikat Data Visualization with Excel, MySkill" },
-  { file: "06-data-science-06.jpg", label: "Sertifikat Data Science #06" },
+  { file: "06-data-science-06.jpg", label: "Sertifikat Data Science Python Introduction For Data Analysis" },
   { file: "05-tableau-workshop.jpg", label: "Sertifikat Workshop Tableau, Zenith Academy" },
 ];
 
