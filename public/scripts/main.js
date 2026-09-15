@@ -32,42 +32,39 @@ if (document.readyState === "complete") {
 }
 
 const ADMIN_CERTIFICATES = [
-  { file: "01-Sertifikat BNSP Farel Maulana Yusuf.jpeg", label: "Sertifikat Kompetensi BNSP, Staf Administrasi Profesional" },
-  { file: "02-surat-keterangan-sudin-pendidikan.jpg", label: "Surat Keterangan Kerja Praktek, Sudin Pendidikan Wilayah I" },
-  { file: "03-piagam-sudin-parekraf.jpg", label: "Piagam Penghargaan, Sudin Pariwisata dan Ekonomi Kreatif" },
-  { file: "04-peringkat-kelas11-genap.jpg", label: "Peringkat 2, Kelas 11 OTKP, Ujian Sekolah Semester Genap" },
-  { file: "05-peringkat-kelas11-des2024.jpg", label: "Peringkat 2, Kelas 11 OTKP, Ujian Sekolah Desember 2024" },
-  { file: "06-peringkat-kelas12-des2025.jpg", label: "Peringkat 2, Kelas 12 OTKP, Ujian Sekolah Desember 2025" },
-  { file: "07-peringkat-kelas12-mplb.jpg", label: "Peringkat 3, Kelas 12 Manajemen Perkantoran Layanan dan Bisnis" },
-  { file: "08-microsoft-word-jobstreet.jpg", label: "Microsoft Skills for Jobs, Microsoft Word" },
-  { file: "09-excel-untuk-admin.jpg", label: "Sertifikat Excel untuk Admin, Jobstreet Career Hub" },
-  { file: "10-rumus-dasar-excel.jpg", label: "Sertifikat Jago Rumus Dasar Excel, Jobstreet Career Hub" },
-  { file: "11-kelas-persiapan-kerja.jpg", label: "Sertifikat Kelas Persiapan Kerja, Jobstreet KarirKu" },
-  { file: "12-Sertifikat UKK Farel Maulana Yusuf.jpeg", label: "Sertifikat Kompetensi Manajemen Perkantoran, PT Indonesia Kurir Cepat" }
+  { file: "01-Sertifikat BNSP Farel Maulana Yusuf.jpeg", label: "Sertifikat Kompetensi BNSP, Staf Administrasi Profesional BY LSP SMKN 13" },
+  { file: "02-surat-keterangan-sudin-pendidikan.jpg", label: "Surat Keterangan Kerja Praktek, Sudin Pendidikan Wilayah I BY SUDIN PENDIDIKAN WIL 1" },
+  { file: "03-piagam-sudin-parekraf.jpg", label: "Piagam Penghargaan, Sudin Pariwisata dan Ekonomi Kreatif BY SUDIN PARAWISATA dan EKONOMI KREATIF" },
+  { file: "04-peringkat-kelas11-genap.jpg", label: "Peringkat 2, Kelas 11 OTKP, Ujian Sekolah Semester Genap BY SMKS KEBON JERUK JAKARTA" },
+  { file: "05-peringkat-kelas11-des2024.jpg", label: "Peringkat 2, Kelas 11 OTKP, Ujian Sekolah Desember 2024 BY SMKS KEBON JERUK JAKARTA" },
+  { file: "06-peringkat-kelas12-des2025.jpg", label: "Peringkat 2, Kelas 12 OTKP, Ujian Sekolah Desember 2025 BY SMKS KEBON JERUK JAKARTA" },
+  { file: "07-peringkat-kelas12-mplb.jpg", label: "Peringkat 3, Kelas 12 Manajemen Perkantoran Layanan dan Bisnis BY SMKS KEBON JERUK JAKARTA" },
+  { file: "08-microsoft-word-jobstreet.jpg", label: "Microsoft Skills for Jobs, Microsoft Word BY JOBSTREET" },
+  { file: "09-excel-untuk-admin.jpg", label: "Sertifikat Excel untuk Admin, BY JOBSTREET CAREER HUB" },
+  { file: "10-rumus-dasar-excel.jpg", label: "Sertifikat Jago Rumus Dasar Excel, BY JOBSTREET CAREER HUB" },
+  { file: "11-kelas-persiapan-kerja.jpg", label: "Sertifikat Kelas Persiapan Kerja, BY JOBSTREET KARIRKU" },
+  { file: "12-Sertifikat UKK Farel Maulana Yusuf.jpeg", label: "Sertifikat Kompetensi Manajemen Perkantoran, BY PT INDONESIA KURIR CEPAT" }
 ];
 
 const DATA_CERTIFICATES = [
-  { file: "01-bootcamp-completion.jpg", label: "Certificate of Completion, Bootcamp Data Science Intelligo.ID" },
-  { file: "02-performance-report.jpg", label: "Performance Report, Intelligo.ID" },
-  { file: "03-data-analysis-fundamental.jpg", label: "Sertifikat Data Analysis Fundamental, MySkill" },
-  { file: "04-data-visualization-excel.jpg", label: "Sertifikat Data Visualization with Excel, MySkill" },
-  { file: "06-data-science-06.jpg", label: "Sertifikat Data Science Python Introduction For Data Analysis" },
-  { file: "05-tableau-workshop.jpg", label: "Sertifikat Workshop Tableau, Zenith Academy" },
+  { file: "01-bootcamp-completion.jpg", label: "Certificate of Completion Bootcamp Data Science, BY INTELLIGO.ID" },
+  { file: "02-performance-report.jpg", label: "Performance Report, BY INTELLIGO.ID" },
+  { file: "03-data-analysis-fundamental.jpg", label: "Sertifikat Data Analysis Fundamental, BY MYSKILL" },
+  { file: "04-data-visualization-excel.jpg", label: "Sertifikat Data Visualization with Excel, BY MYSKILL" },
+  { file: "06-data-science-06.jpg", label: "Sertifikat Data Science Python Introduction For Data Analysis, BY MYSKILL" },
+  { file: "05-tableau-workshop.jpg", label: "Sertifikat Workshop Tableau, BY ZENITH ACADEMY" },
 ];
 
 const MARKETING_CERTIFICATES = [
-  { file: "01-paradaya-movement-sertifikat.jpg", label: "Sertifikat Pelatihan Digital Marketing & SEO, Paradaya Movement" },
-  { file: "02-proxsis-internship-surat.jpg", label: "Surat Keterangan Digital Marketing SEO Internship, PT Proxsis Mark" },
-  { file: "03-dibimbing.jpg", label: "Sertifikat diBimbing" },
-  { file: "04-loveable-ai-myskill.jpg", label: "Sertifikat Lovable AI MySkill" },
-  { file: "05-web-english.jpg", label: "Sertifikat Web English" }
-];
+  { file: "01-paradaya-movement-sertifikat.jpg", label: "Sertifikat Pelatihan Digital Marketing & SEO Paradaya Movement BY LAZNAS DEWAN DA'WAH" },
+  { file: "02-dibimbing.jpg", label: "Sertifikat diBimbing" },
+ ];
 
 const DOCUMENTATION_GALLERY = {
   "teach-for-indonesia": [
-    { src: "assets/dokumentasi/Dokumentasi Binus 1.jpeg", label: "Dokumentasi Binus 1" },
-    { src: "assets/dokumentasi/Dokumentasi Binus 2.jpeg", label: "Dokumentasi Binus 2" },
-    { src: "assets/dokumentasi/Dokumentasi Binus 3.jpeg", label: "Dokumentasi Binus 3" }
+    { src: "assets/dokumentasi/Dokumentasi Binus 1.jpeg", label: "Dokumentasi Pelatihan Bersama Dosen Binus" },
+    { src: "assets/dokumentasi/Dokumentasi Binus 2.jpeg", label: "Dokumentasi Pelatihan Bersama Dosen Binus" },
+    { src: "assets/dokumentasi/Dokumentasi Binus 3.jpeg", label: "Dokumentasi Pelatihan Bersama Dosen Binus" }
   ]
 };
 
