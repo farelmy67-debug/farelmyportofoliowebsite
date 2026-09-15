@@ -32,7 +32,7 @@ if (document.readyState === "complete") {
 }
 
 const ADMIN_CERTIFICATES = [
-  { file: "01-Sertifikat BNSP Farel Maulana Yusuf.jpeg", label: "Sertifikat Kompetensi BNSP, Staf Administrasi Profesional BY LSP SMKN 13" },
+  { file: "01-Sertifikat BNSP Farel Maulana Yusuf.jpeg", label: "Sertifikat Kompetensi BNSP, Staf Administrasi Profesional \n BY LSP SMKN 13" },
   { file: "02-surat-keterangan-sudin-pendidikan.jpg", label: "Surat Keterangan Kerja Praktek, Sudin Pendidikan Wilayah I BY SUDIN PENDIDIKAN WIL 1" },
   { file: "03-piagam-sudin-parekraf.jpg", label: "Piagam Penghargaan, Sudin Pariwisata dan Ekonomi Kreatif BY SUDIN PARAWISATA dan EKONOMI KREATIF" },
   { file: "04-peringkat-kelas11-genap.jpg", label: "Peringkat 2, Kelas 11 OTKP, Ujian Sekolah Semester Genap BY SMKS KEBON JERUK JAKARTA" },
