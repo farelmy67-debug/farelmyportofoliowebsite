@@ -22,6 +22,8 @@
   --accent-data-soft: rgba(212, 175, 90, 0.16);
   --accent-marketing: #7fb2f0;
   --accent-marketing-soft: rgba(127, 178, 240, 0.16);
+  --accent-osis: #7fb2f0;
+  --accent-osis-soft: rgba(127, 178, 240, 0.16);
 
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -366,6 +368,7 @@ body.page-ready .page-shell {
 .role-card[data-accent="admin"] .card-surface:hover { border-color: var(--accent-admin); }
 .role-card[data-accent="data"] .card-surface:hover { border-color: var(--accent-data); }
 .role-card[data-accent="marketing"] .card-surface:hover { border-color: var(--accent-marketing); }
+.role-card[data-accent="osis"] .card-surface:hover { border-color: var(--accent-osis); }
 
 .card-media {
   aspect-ratio: 4 / 5;
@@ -420,6 +423,7 @@ body.page-ready .page-shell {
 .role-card[data-accent="admin"] .accent-line { background: var(--accent-admin); }
 .role-card[data-accent="data"] .accent-line { background: var(--accent-data); }
 .role-card[data-accent="marketing"] .accent-line { background: var(--accent-marketing); }
+.role-card[data-accent="osis"] .accent-line { background: var(--accent-osis); }
 
 .card-label {
   font-size: 0.75rem;
@@ -462,7 +466,8 @@ body.page-ready .page-shell {
 .role-card[data-accent="admin"] .open-btn:hover { background: var(--accent-admin-soft); border-color: var(--accent-admin); }
 .role-card[data-accent="data"] .open-btn:hover { background: var(--accent-data-soft); border-color: var(--accent-data); }
 .role-card[data-accent="marketing"] .open-btn:hover { background: var(--accent-marketing-soft); border-color: var(--accent-marketing); }
-
+.role-card[data-accent="osis"] .open-btn:hover { background: var(--accent-osis-soft); border-color: var(--accent-osis); }
+                                                
 .open-btn:hover {
   transform: translateY(-2px);
 }
@@ -542,6 +547,7 @@ body.panel-open {
 .role-card[data-accent="admin"] .detail-role { color: var(--accent-admin); }
 .role-card[data-accent="data"] .detail-role { color: var(--accent-data); }
 .role-card[data-accent="marketing"] .detail-role { color: var(--accent-marketing); }
+.role-card[data-accent="osis"] .detail-role { color: var(--accent-osis); }
 
 .detail-header h3 {
   font-family: var(--font-display);
