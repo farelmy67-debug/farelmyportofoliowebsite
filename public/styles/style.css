@@ -1433,101 +1433,6 @@ body.panel-open {
    RATING SECTION (Rating & Komentar)
    ========================================================= */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.star-rating .star:hover,
-
-
-
-
-
-
-#comment-input {
-  background: var(--bg-base);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  padding: 12px;
-  font-family: var(--font-base);
-  font-size: 0.95rem;
-  color: var(--text-primary);
-  resize: vertical;
-  transition: border-color 0.2s ease;
-}
-
-#comment-input:focus {
-  outline: none;
-  border-color: var(--border-strong);
-}
-
-#comment-input::placeholder {
-  color: var(--text-muted);
-}
-
-#name-input {
-  background: var(--bg-base);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  padding: 10px 12px;
-  font-family: var(--font-base);
-  font-size: 0.95rem;
-  color: var(--text-primary);
-  transition: border-color 0.2s ease;
-}
-
-#name-input:focus {
-  outline: none;
-  border-color: var(--border-strong);
-}
-
-#name-input::placeholder {
-  color: var(--text-muted);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================================
    RESPONSIVE
    ========================================================= */
@@ -1695,8 +1600,6 @@ h1, h2, h3, h4, .firstpage-card h2 {
   border-radius: var(--radius-md);
 }
 
-
-
 .more-about-btn:hover, .open-btn:hover, .footer-btn:hover, .panel-nav:hover, .panel-back-btn:hover {
   transform: translateY(-2px);
 }
@@ -1711,8 +1614,6 @@ h1, h2, h3, h4, .firstpage-card h2 {
   background: var(--gold-soft);
   box-shadow: var(--shadow-gold);
 }
-
-
 
 /* Kartu role */
 .role-grid { gap: clamp(16px, 2.4vw, 26px); }
@@ -1800,13 +1701,9 @@ h1, h2, h3, h4, .firstpage-card h2 {
 
 .detail-role { color: var(--gold) !important; }
 
-
-
 .detail-block, .tag-panel, .highlight-card, .tool-grid, .bar-chart {
   padding: clamp(20px, 2.6vw, 30px);
 }
-
-
 
 .tag-list span {
   border: 1px solid rgba(63, 127, 214, 0.4);
@@ -1900,26 +1797,12 @@ h1, h2, h3, h4, .firstpage-card h2 {
 }
 .gallery-dots button.active { background: var(--gold); }
 
-/* Footer, rating */
+/* Footer */
 .side-role { padding: 18px; transition: transform 260ms var(--ease-soft), border-color 260ms var(--ease-soft); }
 .side-role:hover { border-color: var(--gold); }
 
 .site-footer { border-top: var(--hairline); padding-top: 40px; }
 .footer-btn { border: 1px solid rgba(212, 175, 90, 0.35); }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Layar sambutan */
 .firstpage-card {
