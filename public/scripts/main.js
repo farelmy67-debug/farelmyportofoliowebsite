@@ -68,6 +68,12 @@ const DOCUMENTATION_GALLERY = {
   ]
 };
 
+const AI_CERT_PATH = "assets/ai-automation/certificates/";
+const AI_CERTIFICATES = [
+  { file: "ai-cert-1.jpg", label: "Sertifikat AI Automation (placeholder)" },
+  { file: "ai-cert-2.jpg", label: "Sertifikat Python for Automation (placeholder)" },
+];
+
 const OTHER_CERTIFICATES = [
   { file: "agama-islam-sd.jpg", label: "Sertifikat Agama Islam SD" },
   { file: "instinct-bahasa-indonesia.jpg", label: "Sertifikat Instinct Bahasa Indonesia" },
@@ -168,6 +174,7 @@ function renderCredentialGrid(containerId, certList, basePath) {
 renderCredentialGrid("admin-certificates", ADMIN_CERTIFICATES, ADMIN_CERT_PATH);
 renderCredentialGrid("data-certificates", DATA_CERTIFICATES, DATA_CERT_PATH);
 renderCredentialGrid("marketing-credentials", MARKETING_CERTIFICATES, MARKETING_CERT_PATH);
+renderCredentialGrid("ai-certificates", AI_CERTIFICATES, AI_CERT_PATH);
 renderCredentialGrid("other-certificates", OTHER_CERTIFICATES, OTHER_CERT_PATH);
 
 const moreAboutBtn = document.querySelector(".more-about-btn");
@@ -581,188 +588,6 @@ function animateBarChart(card) {
 }
 
 // =========================================================
-// RATING & REVIEW SYSTEM
-// =========================================================
-const STORAGE_KEY = "portfolio_ratings";
-let currentRating = 0;
-
-function loadRatings() {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    return stored ? JSON.parse(stored) : [];
-  } catch (e) {
-    console.error("Error loading ratings:", e);
-    return [];
-  }
-}
-
-function saveRatings(ratings) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(ratings));
-  } catch (e) {
-    console.error("Error saving ratings:", e);
-  }
-}
-
-function renderRatingHistory() {
-  const ratings = loadRatings();
-  const historyList = document.getElementById("history-list");
-  const totalRatings = document.getElementById("total-ratings");
-
-  if (!historyList) return;
-
-  totalRatings.textContent = ratings.length;
-
-  if (ratings.length === 0) {
-    historyList.innerHTML = '<p class="empty-state">Belum ada rating. Jadilah yang pertama!</p>';
-    return;
-  }
-
-  historyList.innerHTML = "";
-
-  ratings.reverse().forEach((rating) => {
-    const card = document.createElement("div");
-    card.className = "rating-card";
-
-    const header = document.createElement("div");
-    header.className = "rating-card-header";
-
-    const author = document.createElement("div");
-    author.className = "rating-author";
-    author.textContent = rating.name || "Anonim";
-
-    const stars = document.createElement("div");
-    stars.className = "rating-stars";
-    stars.textContent = "★".repeat(rating.rating);
-
-    const date = document.createElement("div");
-    date.className = "rating-date";
-    const dateObj = new Date(rating.timestamp);
-    date.textContent = dateObj.toLocaleDateString("id-ID", { year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
-
-    header.append(author, stars, date);
-
-    const comment = document.createElement("p");
-    comment.className = "rating-text";
-    comment.textContent = rating.comment;
-
-    card.append(header, comment);
-    historyList.appendChild(card);
-  });
-}
-
-function initRatingSystem() {
-  const ratingForm = document.getElementById("rating-form");
-  const starButtons = document.querySelectorAll(".star-rating .star");
-  const ratingDisplay = document.getElementById("rating-display");
-  const commentInput = document.getElementById("comment-input");
-  const charCount = document.getElementById("char-count");
-  const nameInput = document.getElementById("name-input");
-  const submitBtn = document.querySelector(".submit-btn");
-
-  if (!ratingForm) return;
-
-  // Handle star rating
-  starButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const value = parseInt(btn.dataset.value, 10);
-      currentRating = value;
-
-      // Update visual state
-      starButtons.forEach((b) => {
-        const bValue = parseInt(b.dataset.value, 10);
-        b.classList.toggle("active", bValue <= value);
-      });
-
-      // Update display text
-      ratingDisplay.textContent = `${value} dari 5 bintang`;
-      ratingDisplay.classList.add("selected");
-    });
-
-    btn.addEventListener("mouseenter", () => {
-      const value = parseInt(btn.dataset.value, 10);
-      starButtons.forEach((b) => {
-        const bValue = parseInt(b.dataset.value, 10);
-        b.style.color = bValue <= value ? "var(--gold)" : "var(--text-muted)";
-      });
-    });
-  });
-
-  // Reset star hover on mouse leave
-  document.getElementById("rating-stars").addEventListener("mouseleave", () => {
-    starButtons.forEach((b) => {
-      const bValue = parseInt(b.dataset.value, 10);
-      if (bValue <= currentRating) {
-        b.style.color = "var(--gold)";
-      } else {
-        b.style.color = "var(--text-muted)";
-      }
-    });
-  });
-
-  // Character counter for comment
-  if (commentInput) {
-    commentInput.addEventListener("input", () => {
-      charCount.textContent = commentInput.value.length;
-    });
-  }
-
-  // Form submission
-  ratingForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    if (currentRating === 0) {
-      alert("Silakan pilih rating bintang terlebih dahulu!");
-      return;
-    }
-
-    const comment = commentInput.value.trim();
-    const name = nameInput.value.trim() || "Anonim";
-
-    if (!comment) {
-      alert("Silakan tulis komentar!");
-      return;
-    }
-
-    const newRating = {
-      rating: currentRating,
-      comment: comment,
-      name: name,
-      timestamp: new Date().toISOString()
-    };
-
-    const ratings = loadRatings();
-    ratings.push(newRating);
-    saveRatings(ratings);
-
-    // Reset form
-    currentRating = 0;
-    ratingForm.reset();
-    ratingDisplay.textContent = "";
-    ratingDisplay.classList.remove("selected");
-    charCount.textContent = "0";
-    starButtons.forEach((b) => b.classList.remove("active"));
-
-    // Update history display
-    renderRatingHistory();
-
-    // Show success message
-    alert("Terima kasih atas rating dan komentarmu!");
-  });
-
-  // Initial render
-  renderRatingHistory();
-}
-
-// Initialize rating system when page loads
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initRatingSystem);
-} else {
-  initRatingSystem();
-}
-
-// =========================================================
 // GALLERY SLIDER (Digital Marketing)
 // =========================================================
 function setupGallery() {
@@ -845,3 +670,84 @@ if (document.readyState === "loading") {
 } else {
   initScrollAnimations();
 }
+
+
+// =========================================================
+// PROJECTS & WORKS + TAB SWITCHER (semua role utama)
+// =========================================================
+const ROLE_PROJECTS = {
+  admin: [
+    { title: "Digitalisasi Arsip Dinas", tags: ["Google Sheets", "Kearsipan"], desc: "Menyusun ulang indeks arsip fisik ke spreadsheet terstruktur sehingga pencarian dokumen jauh lebih cepat.", url: "" },
+    { title: "Alur Buku Tamu Digital", tags: ["Google Forms", "Layanan"], desc: "Merancang formulir penerimaan tamu digital untuk mempercepat pencatatan dan rekap harian.", url: "" },
+  ],
+  data: [
+    { title: "Final Project Bootcamp", tags: ["Python", "XGBoost", "SHAP"], desc: "Model prediksi dengan pendekatan CRISP-DM, dilengkapi interpretasi fitur menggunakan SHAP. Skor final project 90.", url: "" },
+    { title: "Dashboard Tableau", tags: ["Tableau", "Visualisasi"], desc: "Dashboard interaktif untuk membantu pengambilan keputusan berbasis data.", url: "" },
+  ],
+  marketing: [
+    { title: "Riset Kompetitif LAZNAS", tags: ["SimilarWeb", "Google Trends"], desc: "Analisis presence digital LAZNAS Dewan Da'wah dibanding BAZNAS dan Rumah Zakat, dipakai sebagai dasar perbaikan strategi.", url: "" },
+    { title: "Kampanye JKN Future Shield", tags: ["Copywriting", "Meta Ads"], desc: "Konten dan dukungan iklan untuk kampanye deteksi fraud BPJS Kesehatan di Healthkathon 2026.", url: "" },
+  ],
+  "ai-automation": [
+    { title: "Workflow Otomasi n8n", tags: ["n8n", "REST API"], desc: "Alur otomatis yang menghubungkan beberapa layanan untuk memangkas pekerjaan manual berulang.", url: "" },
+    { title: "Chatbot Dokumen LangChain", tags: ["Python", "LangChain", "Streamlit"], desc: "Asisten tanya jawab berbasis dokumen dengan antarmuka Streamlit yang sederhana.", url: "" },
+  ],
+};
+
+function renderProjects() {
+  document.querySelectorAll(".project-grid[data-projects]").forEach((grid) => {
+    const list = ROLE_PROJECTS[grid.dataset.projects] || [];
+    grid.innerHTML = "";
+    list.forEach((p) => {
+      const card = document.createElement("article");
+      card.className = "project-card";
+      const thumb = document.createElement("div");
+      thumb.className = "project-thumb";
+      if (p.image) {
+        const img = new Image();
+        img.src = p.image; img.alt = p.title;
+        img.onerror = () => img.remove();
+        thumb.appendChild(img);
+      } else {
+        thumb.innerHTML = '<span>' + p.title.charAt(0) + '</span>';
+      }
+      const body = document.createElement("div");
+      body.className = "project-body";
+      const h = document.createElement("h5"); h.textContent = p.title;
+      const tags = document.createElement("div"); tags.className = "tag-list small";
+      p.tags.forEach((t) => { const s = document.createElement("span"); s.textContent = t; tags.appendChild(s); });
+      const d = document.createElement("p"); d.textContent = p.desc;
+      body.append(h, tags, d);
+      if (p.url) {
+        const a = document.createElement("a");
+        a.className = "project-link"; a.href = p.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+        a.textContent = "Kunjungi Proyek ↗";
+        body.appendChild(a);
+      }
+      card.append(thumb, body);
+      grid.appendChild(card);
+    });
+  });
+}
+
+function setupPanelTabs() {
+  document.querySelectorAll(".panel-tabs").forEach((tabs) => {
+    const panel = tabs.closest(".detail-panel");
+    const buttons = tabs.querySelectorAll("[data-tab]");
+    const select = (name) => {
+      buttons.forEach((b) => {
+        const on = b.dataset.tab === name;
+        b.classList.toggle("active", on);
+        b.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      panel.querySelectorAll("[data-pane]").forEach((pane) => {
+        pane.hidden = pane.dataset.pane !== name;
+      });
+    };
+    buttons.forEach((b) => b.addEventListener("click", (e) => { e.stopPropagation(); select(b.dataset.tab); }));
+    select("projects");
+  });
+}
+
+renderProjects();
+setupPanelTabs();

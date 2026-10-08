@@ -332,8 +332,8 @@ body.page-ready .page-shell {
    ========================================================= */
 .role-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
   margin-bottom: 64px;
 }
 
@@ -1432,83 +1432,30 @@ body.panel-open {
 /* =========================================================
    RATING SECTION (Rating & Komentar)
    ========================================================= */
-.rating-section {
-  max-width: 900px;
-  margin: 60px auto 40px;
-  padding: 0 24px;
-}
 
-.rating-container {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 32px;
-  margin-bottom: 40px;
-}
 
-.rating-container h4 {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
 
-.rating-subtitle {
-  margin: 0 0 24px;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
 
-.rating-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
 
-.form-group label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-primary);
-}
 
-.star-rating {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
 
-.star-rating .star {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 2rem;
-  color: var(--text-muted);
-  padding: 0;
-  transition: color 0.2s ease, transform 0.2s ease;
-  line-height: 1;
-}
+
+
+
+
+
+
+
+
+
 
 .star-rating .star:hover,
-.star-rating .star.active {
-  color: var(--gold);
-  transform: scale(1.15);
-}
 
-.rating-display {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  min-height: 20px;
-}
 
-.rating-display.selected {
-  color: var(--gold);
-  font-weight: 500;
-}
+
+
+
 
 #comment-input {
   background: var(--bg-base);
@@ -1551,104 +1498,35 @@ body.panel-open {
   color: var(--text-muted);
 }
 
-.char-count {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  align-self: flex-end;
-}
 
-.submit-btn {
-  background: var(--accent-data);
-  color: white;
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 12px 24px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
-  align-self: flex-start;
-}
 
-.submit-btn:hover {
-  background: var(--bg-raised);
-  transform: translateY(-2px);
-}
 
-.submit-btn:active {
-  transform: translateY(0);
-}
 
-.submit-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
 
-.rating-history {
-  margin-top: 40px;
-}
 
-.rating-history h4 {
-  margin: 0 0 16px;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
 
-.history-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 
-.rating-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
-.rating-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-}
 
-.rating-author {
-  font-weight: 600;
-  color: var(--text-primary);
-  font-size: 0.95rem;
-}
 
-.rating-stars {
-  font-size: 1.1rem;
-  color: var(--gold);
-  letter-spacing: 2px;
-}
 
-.rating-date {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
 
-.rating-text {
-  margin: 0;
-  color: var(--text-primary);
-  font-size: 0.9rem;
-  line-height: 1.5;
-  word-wrap: break-word;
-}
 
-.empty-state {
-  text-align: center;
-  color: var(--text-muted);
-  padding: 32px 16px;
-  margin: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================================================
    RESPONSIVE
@@ -1817,14 +1695,7 @@ h1, h2, h3, h4, .firstpage-card h2 {
   border-radius: var(--radius-md);
 }
 
-.more-about-btn, .enter-btn, .open-btn, .submit-btn, .footer-btn, .panel-nav, .panel-back-btn {
-  font-family: var(--font-body);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  border-radius: 999px;
-  transition: transform 260ms var(--ease-soft), background 260ms var(--ease-soft),
-    border-color 260ms var(--ease-soft), box-shadow 260ms var(--ease-soft), color 260ms var(--ease-soft);
-}
+
 
 .more-about-btn:hover, .open-btn:hover, .footer-btn:hover, .panel-nav:hover, .panel-back-btn:hover {
   transform: translateY(-2px);
@@ -1841,9 +1712,7 @@ h1, h2, h3, h4, .firstpage-card h2 {
   box-shadow: var(--shadow-gold);
 }
 
-.enter-btn:hover, .submit-btn:hover {
-  transform: translateY(-2px);
-}
+
 
 /* Kartu role */
 .role-grid { gap: clamp(16px, 2.4vw, 26px); }
@@ -1931,22 +1800,13 @@ h1, h2, h3, h4, .firstpage-card h2 {
 
 .detail-role { color: var(--gold) !important; }
 
-.detail-block, .tag-panel, .highlight-card, .tool-grid, .counter-card, .bar-chart, .credential-card, .rating-container, .rating-history, .side-role {
-  background: var(--surface-gradient);
-  border: var(--hairline);
-  border-radius: var(--radius-md);
-}
+
 
 .detail-block, .tag-panel, .highlight-card, .tool-grid, .bar-chart {
   padding: clamp(20px, 2.6vw, 30px);
 }
 
-.detail-block h4, .tag-panel h4, .tool-grid h4, .highlight-card h4, .section-title h4, .rating-container h4, .rating-history h4 {
-  font-size: 0.95rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
+
 
 .tag-list span {
   border: 1px solid rgba(63, 127, 214, 0.4);
@@ -2047,33 +1907,19 @@ h1, h2, h3, h4, .firstpage-card h2 {
 .site-footer { border-top: var(--hairline); padding-top: 40px; }
 .footer-btn { border: 1px solid rgba(212, 175, 90, 0.35); }
 
-.rating-container, .rating-history { padding: clamp(20px, 3vw, 32px); }
-.star-rating .star { transition: transform 180ms var(--ease-soft), color 180ms var(--ease-soft); }
-.star-rating .star:hover { transform: scale(1.15); }
-.star-rating .star.active { color: var(--gold); }
 
-.form-group input, .form-group textarea {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(212, 175, 90, 0.2);
-  border-radius: var(--radius-sm);
-  color: #ffffff;
-  transition: border-color 220ms var(--ease-soft), box-shadow 220ms var(--ease-soft);
-}
-.form-group input:focus, .form-group textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(212, 175, 90, 0.15);
-}
 
-.submit-btn {
-  background: linear-gradient(135deg, #e6c477, #c39a3f);
-  color: #05070d;
-  border: none;
-}
-.submit-btn:hover { box-shadow: var(--shadow-gold); }
 
-.rating-card { border: var(--hairline); border-radius: var(--radius-md); }
-.rating-stars { color: var(--gold); }
+
+
+
+
+
+
+
+
+
+
 
 /* Layar sambutan */
 .firstpage-card {
