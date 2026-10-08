@@ -1967,3 +1967,115 @@ h1, h2, h3, h4, .firstpage-card h2 {
 @media (max-width: 720px) {
   .detail-header-actions { flex-wrap: wrap; justify-content: flex-start; }
 }
+
+/* =========================================================
+   AI ROLE + GLOWING OUTLINE + PROJECTS & TABS
+   ========================================================= */
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+:root {
+  --accent-ai: #ffffff;
+  --accent-ai-soft: rgba(255, 255, 255, 0.14);
+  --glow-admin: #3f7fd6;
+  --glow-data: #ff8a2a;
+  --glow-marketing: #2fe0f0;
+  --glow-ai: #ffffff;
+}
+.role-card:nth-child(4) { animation-delay: 0.3s; }
+.role-card[data-accent="ai"] .accent-line { background: var(--accent-ai); }
+.role-card[data-accent="ai"] .detail-role { color: var(--accent-ai); }
+.role-card[data-accent="ai"] .counter-card .count { color: var(--accent-ai); }
+.role-card[data-accent="ai"] .timeline-item::before { border-color: var(--accent-ai); }
+.role-card[data-accent="ai"] .open-btn:hover { background: var(--accent-ai-soft); border-color: var(--accent-ai); }
+
+.role-grid .role-card { --glow: var(--gold); }
+.role-grid .role-card .card-surface { position: relative; isolation: isolate; }
+.role-grid .role-card .card-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(from var(--glow-angle), transparent 0deg, color-mix(in srgb, var(--glow) 35%, transparent) 60deg, var(--glow) 100deg, transparent 150deg, transparent 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.75;
+  animation: glow-spin 6s linear infinite;
+  transition: opacity 0.4s ease;
+}
+.role-grid .role-card:hover .card-surface::after,
+.role-grid .role-card:focus-visible .card-surface::after,
+.role-grid .role-card.is-open .card-surface::after { opacity: 1; filter: drop-shadow(0 0 6px var(--glow)); }
+.role-grid .role-card[data-accent="admin"]:is(:hover, :focus-visible, .is-open) { --glow: var(--glow-admin); }
+.role-grid .role-card[data-accent="data"]:is(:hover, :focus-visible, .is-open) { --glow: var(--glow-data); }
+.role-grid .role-card[data-accent="marketing"]:is(:hover, :focus-visible, .is-open) { --glow: var(--glow-marketing); }
+.role-grid .role-card[data-accent="ai"]:is(:hover, :focus-visible, .is-open) { --glow: var(--glow-ai); }
+@keyframes glow-spin { to { --glow-angle: 360deg; } }
+@media (prefers-reduced-motion: reduce) {
+  .role-grid .role-card .card-surface::after { animation: none; }
+}
+
+.panel-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 8px;
+}
+.panel-tabs button {
+  flex: 1 1 220px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 90, 0.35);
+  background: transparent;
+  color: var(--text, #fff);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.panel-tabs button:hover { border-color: var(--gold); }
+.panel-tabs button.active { background: var(--gold); border-color: var(--gold); color: #05070d; }
+
+.projects-section { margin-top: 24px; }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(212, 175, 90, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(10, 17, 32, 0.9), rgba(5, 7, 13, 0.9));
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.project-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+.project-thumb {
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 30% 20%, rgba(63, 127, 214, 0.45), transparent 60%), linear-gradient(135deg, #0a1120, #05070d);
+  border-bottom: 1px solid rgba(212, 175, 90, 0.2);
+}
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.project-thumb span { font-size: 2.4rem; font-weight: 700; color: var(--gold); }
+.project-body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.project-body h5 { margin: 0; font-size: 1.05rem; color: #fff; }
+.project-body p { margin: 0; color: rgba(255, 255, 255, 0.72); line-height: 1.6; font-size: 0.92rem; }
+.project-link {
+  margin-top: auto;
+  align-self: flex-start;
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.credential-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
