@@ -688,9 +688,21 @@ const ROLE_PROJECTS = {
     { title: "Riset Kompetitif LAZNAS", tags: ["SimilarWeb", "Google Trends"], desc: "Analisis presence digital LAZNAS Dewan Da'wah dibanding BAZNAS dan Rumah Zakat, dipakai sebagai dasar perbaikan strategi.", url: "" },
     { title: "Kampanye JKN Future Shield", tags: ["Copywriting", "Meta Ads"], desc: "Konten dan dukungan iklan untuk kampanye deteksi fraud BPJS Kesehatan di Healthkathon 2026.", url: "" },
   ],
-  "ai-automation": [
-    { title: "Workflow Otomasi n8n", tags: ["n8n", "groq API"], desc: "Alur otomatis yang menghubungkan beberapa layanan untuk memangkas pekerjaan manual berulang.", url: "https://github.com/farelmy67-debug/FMY-FINAL-PROJECT.git" },
-    { title: "Retrival Augmented Generation", tags: ["Python", "LangChain", "Streamlit"], desc: "Asisten Chat Bot AI Dengan Tema PPKD JB dimana miliki knowledge sekitar PPKD JB yang bersifat umum atau public dan internal.", url: "https://github.com/farelmy67-debug/RAG_PROJECTFMY.git" },
+    "ai-automation": [
+    {
+      title: "Workflow Otomasi n8n",
+      image: "/assets/project/final_project_workflow_image.png",
+      tags: ["n8n", "groq API"],
+      desc: "Alur otomatis yang menghubungkan beberapa layanan untuk memangkas pekerjaan manual berulang.",
+      url: "https://github.com/farelmy67-debug/FMY-FINAL-PROJECT.git"
+    },
+    {
+      title: "Retrival Augmented Generation",
+      image: "/assets/project/mini_project_rag_image.png",
+      tags: ["Python", "LangChain", "Streamlit"],
+      desc: "Asisten Chat Bot AI Dengan Tema PPKD JB dimana miliki knowledge sekitar PPKD JB yang bersifat umum atau public dan internal.",
+      url: "https://github.com/farelmy67-debug/RAG_PROJECTFMY.git"
+    },
   ],
 };
 
