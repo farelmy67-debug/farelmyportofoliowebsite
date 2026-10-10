@@ -58,6 +58,7 @@ const DATA_CERTIFICATES = [
 const MARKETING_CERTIFICATES = [
   { file: "01-paradaya-movement-sertifikat.jpg", label: "Sertifikat Pelatihan Digital Marketing & SEO Paradaya Movement. \n BY LAZNAS DEWAN DA'WAH" },
   { file: "02-dibimbing.jpg", label: "Sertifikat Digital Marketing. \n By DiBimbing" },
+  { file: "03-sertifikat-bnsp-digital-marketing.jpg", label: "Sertifikat Kompetensi BNSP, Pemasaran Digital (Digital Marketing). \n BY LSP MANAJEMEN BISNIS PEMASARAN" },
  ];
 
 const DOCUMENTATION_GALLERY = {
@@ -70,8 +71,8 @@ const DOCUMENTATION_GALLERY = {
 
 const AI_CERT_PATH = "assets/ai-automation/certificates/";
 const AI_CERTIFICATES = [
-  { file: "ai-cert-1.jpg", label: "Sertifikat AI Automation (placeholder)" },
-  { file: "ai-cert-2.jpg", label: "Sertifikat Python for Automation (placeholder)" },
+  { file: "sertifikat-pelatihan-ppkd-aiae.pdf", label: "Sertifikat Pelatihan AI Automation Engineer. \n BY PPKD JAKARTA BARAT" },
+  { file: "sertifikat-peserta-terbaik-ai.jpg", label: "Sertifikat Peserta Terbaik, Pelatihan & Uji Kompetensi AI Automation Engineer. \n BY PPKD JAKARTA BARAT" },
 ];
 
 const OTHER_CERTIFICATES = [
@@ -113,6 +114,18 @@ function renderCredentialGrid(containerId, certList, basePath) {
 
     const preview = document.createElement("div");
     preview.className = "credential-preview";
+
+    if (/\.pdf$/i.test(cert.file)) {
+      preview.classList.add("credential-pdf");
+      preview.innerHTML = '<svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><text x="12" y="17" text-anchor="middle" font-size="5" fill="currentColor" stroke="none" font-weight="700">PDF</text></svg><span>Buka dokumen PDF</span>';
+      card.addEventListener("click", () => window.open(basePath + cert.file, "_blank", "noopener,noreferrer"));
+      const pl = document.createElement("div");
+      pl.className = "credential-label";
+      pl.textContent = cert.label;
+      card.append(preview, pl);
+      container.appendChild(card);
+      return;
+    }
 
     const img = new Image();
     img.src = basePath + cert.file;
@@ -713,6 +726,7 @@ function renderProjects() {
     list.forEach((p) => {
       const card = document.createElement("article");
       card.className = "project-card";
+      card.dataset.accent = grid.dataset.projects;
       const thumb = document.createElement("div");
       thumb.className = "project-thumb";
       if (p.image) {
@@ -733,7 +747,12 @@ function renderProjects() {
       if (p.url) {
         const a = document.createElement("a");
         a.className = "project-link"; a.href = p.url; a.target = "_blank"; a.rel = "noopener noreferrer";
-        a.textContent = "Kunjungi Proyek ↗";
+        a.setAttribute("aria-label", "Kunjungi proyek " + p.title);
+        const gh = /github\.com/i.test(p.url);
+        a.innerHTML = (gh
+          ? '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>'
+          : '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>')
+          + '<span>' + (gh ? "Lihat di GitHub" : "Kunjungi Proyek") + '</span>';
         body.appendChild(a);
       }
       card.append(thumb, body);
