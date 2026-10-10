@@ -71,8 +71,9 @@ const DOCUMENTATION_GALLERY = {
 
 const AI_CERT_PATH = "assets/ai-automation/certificates/";
 const AI_CERTIFICATES = [
-  { file: "sertifikat-pelatihan-ppkd-aiae.pdf", label: "Sertifikat Pelatihan AI Automation Engineer. \n BY PPKD JAKARTA BARAT" },
+  { file: "sertifikat-pelatihan-ppkd-aiae.jpg", label: "Sertifikat Pelatihan AI Automation Engineer. \n BY PPKD JAKARTA BARAT", fit: "contain" },
   { file: "sertifikat-peserta-terbaik-ai.jpg", label: "Sertifikat Peserta Terbaik, Pelatihan & Uji Kompetensi AI Automation Engineer. \n BY PPKD JAKARTA BARAT" },
+  { pending: true, status: "In Progress", file: "sertifikat-bnsp-ai-automation-engineer.jpg", label: "Sertifikat Kompetensi BNSP, AI Automation Engineer. \n (In Progress)" },
 ];
 
 const OTHER_CERTIFICATES = [
@@ -115,6 +116,26 @@ function renderCredentialGrid(containerId, certList, basePath) {
     const preview = document.createElement("div");
     preview.className = "credential-preview";
 
+    if (cert.pending) {
+      preview.classList.add("credential-pending");
+      preview.innerHTML = '<svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg><span>Sertifikat segera ditambahkan</span>';
+      card.classList.add("placeholder-card");
+
+      if (cert.status) {
+        const badge = document.createElement("span");
+        badge.className = "credential-status";
+        badge.textContent = cert.status;
+        preview.appendChild(badge);
+      }
+
+      const pendingLabel = document.createElement("div");
+      pendingLabel.className = "credential-label";
+      pendingLabel.textContent = cert.label;
+      card.append(preview, pendingLabel);
+      container.appendChild(card);
+      return;
+    }
+
     if (/\.pdf$/i.test(cert.file)) {
       preview.classList.add("credential-pdf");
       preview.innerHTML = '<svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><text x="12" y="17" text-anchor="middle" font-size="5" fill="currentColor" stroke="none" font-weight="700">PDF</text></svg><span>Buka dokumen PDF</span>';
@@ -133,6 +154,7 @@ function renderCredentialGrid(containerId, certList, basePath) {
 
     img.onload = () => {
       preview.appendChild(img);
+      if (cert.fit === "contain") preview.classList.add("credential-contain");
 
       const openPreview = () => openLightbox(img.src, cert.label);
 
