@@ -1865,7 +1865,7 @@ h1, h2, h3, h4, .firstpage-card h2 {
   --glow-admin: #3f7fd6;
   --glow-data: #ff8a2a;
   --glow-marketing: #2fe0f0;
-  --glow-ai: #ffffff;
+  --glow-ai: #ff8a2a;
 }
 .role-card:nth-child(4) { animation-delay: 0.3s; }
 .role-card[data-accent="ai"] .accent-line { background: var(--accent-ai); }
@@ -1955,10 +1955,52 @@ h1, h2, h3, h4, .firstpage-card h2 {
 .project-body p { margin: 0; color: rgba(255, 255, 255, 0.72); line-height: 1.6; font-size: 0.92rem; }
 .project-link {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 90, 0.4);
   color: var(--gold);
   font-weight: 600;
+  font-size: 0.85rem;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
+  transition: background 0.25s ease, color 0.25s ease;
 }
+.project-link:hover { background: var(--gold); color: #05070d; }
+.credential-pdf { display: grid; place-items: center; gap: 8px; color: var(--gold); min-height: 160px; font-weight: 600; font-size: 0.85rem; }
+
+/* Role-specific layered glow (role cards + project cards, synced) */
+.role-grid .role-card[data-accent="admin"], .project-card[data-accent="admin"] {
+  --glow-grad: conic-gradient(from var(--glow-angle), transparent 0deg, #0a1f4d 50deg, #3f7fd6 100deg, #ffffff 130deg, #3f7fd6 160deg, transparent 210deg, transparent 360deg); }
+.role-grid .role-card[data-accent="data"], .project-card[data-accent="data"] {
+  --glow-grad: conic-gradient(from var(--glow-angle), transparent 0deg, #000000 50deg, #ff8a2a 110deg, #ffb066 135deg, #000000 190deg, transparent 230deg, transparent 360deg); }
+.role-grid .role-card[data-accent="marketing"], .project-card[data-accent="marketing"] {
+  --glow-grad: conic-gradient(from var(--glow-angle), transparent 0deg, #8fd8ff 50deg, #2fe0f0 100deg, #6dff9a 130deg, #8fd8ff 170deg, transparent 220deg, transparent 360deg); }
+.role-grid .role-card[data-accent="ai"], .project-card[data-accent="ai-automation"] {
+  --glow-grad: conic-gradient(from var(--glow-angle), transparent 0deg, #000000 40deg, #ff8a2a 80deg, #9b4dff 110deg, #ff3b3b 140deg, #ff8a2a 170deg, #000000 200deg, transparent 240deg, transparent 360deg); }
+.role-grid .role-card:is(:hover, :focus-visible, .is-open) .card-surface::after { background: var(--glow-grad); filter: drop-shadow(0 0 8px color-mix(in srgb, var(--glow) 60%, transparent)); }
+.project-card { position: relative; isolation: isolate; }
+.project-card::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px;
+  background: var(--glow-grad);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  pointer-events: none; z-index: 2; opacity: 0.6;
+  animation: glow-spin 6s linear infinite; transition: opacity 0.3s ease;
+}
+.project-card:hover::after { opacity: 1; }
+.project-card .project-thumb { position: relative; }
+.project-card .project-thumb::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--glow, var(--gold)), transparent);
+  background-size: 200% 100%; animation: divider-flow 6s linear infinite; opacity: 0.8;
+}
+.project-card[data-accent="admin"] { --glow: #3f7fd6; }
+.project-card[data-accent="data"] { --glow: #ff8a2a; }
+.project-card[data-accent="marketing"] { --glow: #2fe0f0; }
+.project-card[data-accent="ai-automation"] { --glow: #9b4dff; }
+@keyframes divider-flow { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+@media (prefers-reduced-motion: reduce) { .project-card::after, .project-card .project-thumb::after { animation: none; } }
 .credential-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
