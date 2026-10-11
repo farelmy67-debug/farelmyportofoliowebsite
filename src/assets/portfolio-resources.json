@@ -75,7 +75,7 @@
       }
     },
     {
-      "name": "LAZNAS Dewan Da\u2019wah",
+      "name": "LAZNAS Dewan Da’wah",
       "asset": {
         "version": 1,
         "asset_id": "c56f9d75-3af4-4be8-8cc5-ec79fc84f9bc",
@@ -120,98 +120,126 @@
       "name": "RevoU",
       "asset": {
         "version": 1,
-        "asset_id": "2087bffd-f155-47f2-8a0b-dc710bbb30d4",
+        "asset_id": "5818875a-013b-44f5-88b5-308437cde1f8",
         "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
-        "url": "/__l5e/assets-v1/2087bffd-f155-47f2-8a0b-dc710bbb30d4/RevoU.png",
-        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/2087bffd-f155-47f2-8a0b-dc710bbb30d4/RevoU.png",
-        "original_filename": "RevoU.png",
-        "size": 17161,
+        "url": "/__l5e/assets-v1/5818875a-013b-44f5-88b5-308437cde1f8/revou.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/5818875a-013b-44f5-88b5-308437cde1f8/revou.png",
+        "original_filename": "revou.png",
+        "size": 5148,
         "content_type": "image/png",
-        "created_at": "2026-10-11T10:25:13Z"
+        "created_at": "2026-10-11T10:48:31Z"
       }
     },
     {
       "name": "BINUS University",
       "asset": {
         "version": 1,
-        "asset_id": "34082d91-61dc-42c0-906e-b3e9a8911ccd",
+        "asset_id": "d83b9079-9a23-450f-812c-ce621e6bafee",
         "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
-        "url": "/__l5e/assets-v1/34082d91-61dc-42c0-906e-b3e9a8911ccd/BINUS-University.png",
-        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/34082d91-61dc-42c0-906e-b3e9a8911ccd/BINUS-University.png",
-        "original_filename": "BINUS-University.png",
-        "size": 19852,
+        "url": "/__l5e/assets-v1/d83b9079-9a23-450f-812c-ce621e6bafee/binus.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/d83b9079-9a23-450f-812c-ce621e6bafee/binus.png",
+        "original_filename": "binus.png",
+        "size": 4628,
         "content_type": "image/png",
-        "created_at": "2026-10-11T10:25:15Z"
+        "created_at": "2026-10-11T10:48:34Z"
       }
     },
     {
       "name": "MySkill",
       "asset": {
         "version": 1,
-        "asset_id": "d0417516-9d9a-4374-8858-da630770edb5",
+        "asset_id": "eaf2cf3c-3c16-43a4-a001-7b79ac832bed",
         "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
-        "url": "/__l5e/assets-v1/d0417516-9d9a-4374-8858-da630770edb5/MySkill.png",
-        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/d0417516-9d9a-4374-8858-da630770edb5/MySkill.png",
-        "original_filename": "MySkill.png",
-        "size": 16121,
-        "content_type": "image/png",
-        "created_at": "2026-10-11T10:25:17Z"
+        "url": "/__l5e/assets-v1/eaf2cf3c-3c16-43a4-a001-7b79ac832bed/myskill.jpg",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/eaf2cf3c-3c16-43a4-a001-7b79ac832bed/myskill.jpg",
+        "original_filename": "myskill.jpg",
+        "size": 7372,
+        "content_type": "image/jpeg",
+        "created_at": "2026-10-11T10:48:37Z"
       }
     },
     {
       "name": "I Am Polyglot Indonesia",
       "asset": {
         "version": 1,
-        "asset_id": "a7d364c3-20af-4291-9810-82e72b1e39a1",
+        "asset_id": "f6012404-8a08-40e6-a23a-a968a386611b",
         "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
-        "url": "/__l5e/assets-v1/a7d364c3-20af-4291-9810-82e72b1e39a1/I-Am-Polyglot-Indonesia.png",
-        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/a7d364c3-20af-4291-9810-82e72b1e39a1/I-Am-Polyglot-Indonesia.png",
-        "original_filename": "I-Am-Polyglot-Indonesia.png",
-        "size": 20073,
+        "url": "/__l5e/assets-v1/f6012404-8a08-40e6-a23a-a968a386611b/polyglot.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/f6012404-8a08-40e6-a23a-a968a386611b/polyglot.png",
+        "original_filename": "polyglot.png",
+        "size": 24058,
         "content_type": "image/png",
-        "created_at": "2026-10-11T10:25:20Z"
+        "created_at": "2026-10-11T10:48:40Z"
       }
     },
     {
       "name": "Zenith Academy",
       "asset": {
         "version": 1,
-        "asset_id": "3f6b0675-1589-4471-8779-38c4da8b49ba",
+        "asset_id": "de0cd68a-91c6-46d4-9351-e0dcdf9b0cc5",
         "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
-        "url": "/__l5e/assets-v1/3f6b0675-1589-4471-8779-38c4da8b49ba/Zenith-Academy.png",
-        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/3f6b0675-1589-4471-8779-38c4da8b49ba/Zenith-Academy.png",
-        "original_filename": "Zenith-Academy.png",
-        "size": 30305,
-        "content_type": "image/png",
-        "created_at": "2026-10-11T10:25:22Z"
+        "url": "/__l5e/assets-v1/de0cd68a-91c6-46d4-9351-e0dcdf9b0cc5/zenith.jpg",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/de0cd68a-91c6-46d4-9351-e0dcdf9b0cc5/zenith.jpg",
+        "original_filename": "zenith.jpg",
+        "size": 16472,
+        "content_type": "image/jpeg",
+        "created_at": "2026-10-11T10:48:48Z"
       }
     },
     {
       "name": "Sekolah Programming Indonesia",
       "asset": {
         "version": 1,
-        "asset_id": "a50ae763-ae1f-4f98-b243-9ed1d435a49f",
+        "asset_id": "85e53e1b-1191-48d3-bd54-87647aec0950",
         "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
-        "url": "/__l5e/assets-v1/a50ae763-ae1f-4f98-b243-9ed1d435a49f/Sekolah-Programming-Indonesia.png",
-        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/a50ae763-ae1f-4f98-b243-9ed1d435a49f/Sekolah-Programming-Indonesia.png",
-        "original_filename": "Sekolah-Programming-Indonesia.png",
-        "size": 46865,
-        "content_type": "image/png",
-        "created_at": "2026-10-11T10:25:25Z"
+        "url": "/__l5e/assets-v1/85e53e1b-1191-48d3-bd54-87647aec0950/spi.jpg",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/85e53e1b-1191-48d3-bd54-87647aec0950/spi.jpg",
+        "original_filename": "spi.jpg",
+        "size": 10375,
+        "content_type": "image/jpeg",
+        "created_at": "2026-10-11T10:48:45Z"
       }
     },
     {
       "name": "Magna Education",
       "asset": {
         "version": 1,
-        "asset_id": "895dfb17-6d9d-46c6-b208-8f2d6ea37ae3",
+        "asset_id": "585221cf-4681-4b1e-9073-e48e0fd75641",
         "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
-        "url": "/__l5e/assets-v1/895dfb17-6d9d-46c6-b208-8f2d6ea37ae3/Magna-Education.png",
-        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/895dfb17-6d9d-46c6-b208-8f2d6ea37ae3/Magna-Education.png",
-        "original_filename": "Magna-Education.png",
-        "size": 30014,
+        "url": "/__l5e/assets-v1/585221cf-4681-4b1e-9073-e48e0fd75641/magna.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/585221cf-4681-4b1e-9073-e48e0fd75641/magna.png",
+        "original_filename": "magna.png",
+        "size": 15145,
         "content_type": "image/png",
-        "created_at": "2026-10-11T10:25:28Z"
+        "created_at": "2026-10-11T10:48:42Z"
+      }
+    },
+    {
+      "name": "EIE Private Course",
+      "asset": {
+        "version": 1,
+        "asset_id": "4851910b-8469-464e-8560-e1dd71e6ad31",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/4851910b-8469-464e-8560-e1dd71e6ad31/eie-private-course.jpg",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/4851910b-8469-464e-8560-e1dd71e6ad31/eie-private-course.jpg",
+        "original_filename": "eie-private-course.jpg",
+        "size": 19887,
+        "content_type": "image/jpeg",
+        "created_at": "2026-10-11T10:48:51Z"
+      }
+    },
+    {
+      "name": "Sudin Pendidikan Wilayah I Jakarta Barat",
+      "asset": {
+        "version": 1,
+        "asset_id": "8d0f452b-5629-4754-ab98-ad3a7cc25b50",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/8d0f452b-5629-4754-ab98-ad3a7cc25b50/sudin-pendidikan.jpg",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/8d0f452b-5629-4754-ab98-ad3a7cc25b50/sudin-pendidikan.jpg",
+        "original_filename": "sudin-pendidikan.jpg",
+        "size": 14872,
+        "content_type": "image/jpeg",
+        "created_at": "2026-10-11T10:48:54Z"
       }
     }
   ]
