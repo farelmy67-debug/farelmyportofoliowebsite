@@ -1,0 +1,218 @@
+{
+  "cv": {
+    "admin": {
+      "version": 1,
+      "asset_id": "3c8c978f-9745-47c0-8df4-2eaf9fd226ca",
+      "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+      "url": "/__l5e/assets-v1/3c8c978f-9745-47c0-8df4-2eaf9fd226ca/CV_Farel_Maulana_Yusuf_Administrator_v4.pdf",
+      "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/3c8c978f-9745-47c0-8df4-2eaf9fd226ca/CV_Farel_Maulana_Yusuf_Administrator_v4.pdf",
+      "original_filename": "CV_Farel_Maulana_Yusuf_Administrator_v4.pdf",
+      "size": 4851,
+      "content_type": "application/pdf",
+      "created_at": "2026-10-11T10:24:47Z"
+    },
+    "data": {
+      "version": 1,
+      "asset_id": "10542003-d4c5-4949-84c9-756bf31f4bbc",
+      "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+      "url": "/__l5e/assets-v1/10542003-d4c5-4949-84c9-756bf31f4bbc/CV_Farel_Maulana_Yusuf_DataAnalyst_v4.pdf",
+      "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/10542003-d4c5-4949-84c9-756bf31f4bbc/CV_Farel_Maulana_Yusuf_DataAnalyst_v4.pdf",
+      "original_filename": "CV_Farel_Maulana_Yusuf_DataAnalyst_v4.pdf",
+      "size": 5060,
+      "content_type": "application/pdf",
+      "created_at": "2026-10-11T10:24:50Z"
+    },
+    "marketing": {
+      "version": 1,
+      "asset_id": "669db951-aaeb-46b0-a771-33aaf94b8069",
+      "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+      "url": "/__l5e/assets-v1/669db951-aaeb-46b0-a771-33aaf94b8069/CV_Farel_Maulana_Yusuf_DigitalMarketing_v4.pdf",
+      "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/669db951-aaeb-46b0-a771-33aaf94b8069/CV_Farel_Maulana_Yusuf_DigitalMarketing_v4.pdf",
+      "original_filename": "CV_Farel_Maulana_Yusuf_DigitalMarketing_v4.pdf",
+      "size": 5146,
+      "content_type": "application/pdf",
+      "created_at": "2026-10-11T10:24:52Z"
+    },
+    "ai-automation": {
+      "version": 1,
+      "asset_id": "ba2b9d2b-071e-44e4-b4af-c979996534f0",
+      "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+      "url": "/__l5e/assets-v1/ba2b9d2b-071e-44e4-b4af-c979996534f0/CV_Farel_Maulana_Yusuf_AIAutomation_v4.pdf",
+      "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/ba2b9d2b-071e-44e4-b4af-c979996534f0/CV_Farel_Maulana_Yusuf_AIAutomation_v4.pdf",
+      "original_filename": "CV_Farel_Maulana_Yusuf_AIAutomation_v4.pdf",
+      "size": 5057,
+      "content_type": "application/pdf",
+      "created_at": "2026-10-11T10:24:56Z"
+    }
+  },
+  "logos": [
+    {
+      "name": "Yayasan Indonesia Jerman",
+      "asset": {
+        "version": 1,
+        "asset_id": "3757bb22-738f-4f14-bb68-6bf0b25ad602",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/3757bb22-738f-4f14-bb68-6bf0b25ad602/images.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/3757bb22-738f-4f14-bb68-6bf0b25ad602/images.png",
+        "original_filename": "images.png",
+        "size": 17705,
+        "content_type": "image/png",
+        "created_at": "2026-10-11T10:24:59Z"
+      }
+    },
+    {
+      "name": "Intelligo.ID",
+      "asset": {
+        "version": 1,
+        "asset_id": "b47d58be-f8e7-448b-b436-b903413e6280",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/b47d58be-f8e7-448b-b436-b903413e6280/images.jpg",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/b47d58be-f8e7-448b-b436-b903413e6280/images.jpg",
+        "original_filename": "images.jpg",
+        "size": 11809,
+        "content_type": "image/jpeg",
+        "created_at": "2026-10-11T10:25:02Z"
+      }
+    },
+    {
+      "name": "LAZNAS Dewan Da\u2019wah",
+      "asset": {
+        "version": 1,
+        "asset_id": "c56f9d75-3af4-4be8-8cc5-ec79fc84f9bc",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/c56f9d75-3af4-4be8-8cc5-ec79fc84f9bc/images-2.jpg",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/c56f9d75-3af4-4be8-8cc5-ec79fc84f9bc/images-2.jpg",
+        "original_filename": "images-2.jpg",
+        "size": 6690,
+        "content_type": "image/jpeg",
+        "created_at": "2026-10-11T10:25:04Z"
+      }
+    },
+    {
+      "name": "PPKD Jakarta Barat",
+      "asset": {
+        "version": 1,
+        "asset_id": "d2093570-6fa9-4534-97b8-1bada3f0e666",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/d2093570-6fa9-4534-97b8-1bada3f0e666/images-3.jpg",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/d2093570-6fa9-4534-97b8-1bada3f0e666/images-3.jpg",
+        "original_filename": "images-3.jpg",
+        "size": 22487,
+        "content_type": "image/jpeg",
+        "created_at": "2026-10-11T10:25:07Z"
+      }
+    },
+    {
+      "name": "Hacktiv8",
+      "asset": {
+        "version": 1,
+        "asset_id": "111fe138-ef7e-49ab-83a5-fc83f8da851c",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/111fe138-ef7e-49ab-83a5-fc83f8da851c/images-4.jpg",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/111fe138-ef7e-49ab-83a5-fc83f8da851c/images-4.jpg",
+        "original_filename": "images-4.jpg",
+        "size": 16428,
+        "content_type": "image/jpeg",
+        "created_at": "2026-10-11T10:25:10Z"
+      }
+    },
+    {
+      "name": "RevoU",
+      "asset": {
+        "version": 1,
+        "asset_id": "2087bffd-f155-47f2-8a0b-dc710bbb30d4",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/2087bffd-f155-47f2-8a0b-dc710bbb30d4/RevoU.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/2087bffd-f155-47f2-8a0b-dc710bbb30d4/RevoU.png",
+        "original_filename": "RevoU.png",
+        "size": 17161,
+        "content_type": "image/png",
+        "created_at": "2026-10-11T10:25:13Z"
+      }
+    },
+    {
+      "name": "BINUS University",
+      "asset": {
+        "version": 1,
+        "asset_id": "34082d91-61dc-42c0-906e-b3e9a8911ccd",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/34082d91-61dc-42c0-906e-b3e9a8911ccd/BINUS-University.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/34082d91-61dc-42c0-906e-b3e9a8911ccd/BINUS-University.png",
+        "original_filename": "BINUS-University.png",
+        "size": 19852,
+        "content_type": "image/png",
+        "created_at": "2026-10-11T10:25:15Z"
+      }
+    },
+    {
+      "name": "MySkill",
+      "asset": {
+        "version": 1,
+        "asset_id": "d0417516-9d9a-4374-8858-da630770edb5",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/d0417516-9d9a-4374-8858-da630770edb5/MySkill.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/d0417516-9d9a-4374-8858-da630770edb5/MySkill.png",
+        "original_filename": "MySkill.png",
+        "size": 16121,
+        "content_type": "image/png",
+        "created_at": "2026-10-11T10:25:17Z"
+      }
+    },
+    {
+      "name": "I Am Polyglot Indonesia",
+      "asset": {
+        "version": 1,
+        "asset_id": "a7d364c3-20af-4291-9810-82e72b1e39a1",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/a7d364c3-20af-4291-9810-82e72b1e39a1/I-Am-Polyglot-Indonesia.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/a7d364c3-20af-4291-9810-82e72b1e39a1/I-Am-Polyglot-Indonesia.png",
+        "original_filename": "I-Am-Polyglot-Indonesia.png",
+        "size": 20073,
+        "content_type": "image/png",
+        "created_at": "2026-10-11T10:25:20Z"
+      }
+    },
+    {
+      "name": "Zenith Academy",
+      "asset": {
+        "version": 1,
+        "asset_id": "3f6b0675-1589-4471-8779-38c4da8b49ba",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/3f6b0675-1589-4471-8779-38c4da8b49ba/Zenith-Academy.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/3f6b0675-1589-4471-8779-38c4da8b49ba/Zenith-Academy.png",
+        "original_filename": "Zenith-Academy.png",
+        "size": 30305,
+        "content_type": "image/png",
+        "created_at": "2026-10-11T10:25:22Z"
+      }
+    },
+    {
+      "name": "Sekolah Programming Indonesia",
+      "asset": {
+        "version": 1,
+        "asset_id": "a50ae763-ae1f-4f98-b243-9ed1d435a49f",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/a50ae763-ae1f-4f98-b243-9ed1d435a49f/Sekolah-Programming-Indonesia.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/a50ae763-ae1f-4f98-b243-9ed1d435a49f/Sekolah-Programming-Indonesia.png",
+        "original_filename": "Sekolah-Programming-Indonesia.png",
+        "size": 46865,
+        "content_type": "image/png",
+        "created_at": "2026-10-11T10:25:25Z"
+      }
+    },
+    {
+      "name": "Magna Education",
+      "asset": {
+        "version": 1,
+        "asset_id": "895dfb17-6d9d-46c6-b208-8f2d6ea37ae3",
+        "project_id": "6c1517ee-e8f7-4ec0-ac33-4d26e3059a17",
+        "url": "/__l5e/assets-v1/895dfb17-6d9d-46c6-b208-8f2d6ea37ae3/Magna-Education.png",
+        "r2_key": "a/v1/6c1517ee-e8f7-4ec0-ac33-4d26e3059a17/895dfb17-6d9d-46c6-b208-8f2d6ea37ae3/Magna-Education.png",
+        "original_filename": "Magna-Education.png",
+        "size": 30014,
+        "content_type": "image/png",
+        "created_at": "2026-10-11T10:25:28Z"
+      }
+    }
+  ]
+}
