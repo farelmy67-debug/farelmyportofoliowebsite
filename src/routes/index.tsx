@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import bodyHtml from "../portfolio/body.html?raw";
+import portfolioResources from "../assets/portfolio-resources.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,12 +36,18 @@ export const Route = createFileRoute("/")({
 
 function Portfolio() {
   useEffect(() => {
+    const resources = document.createElement("script");
+    resources.id = "portfolio-resources";
+    resources.type = "application/json";
+    resources.textContent = JSON.stringify(portfolioResources);
+    document.body.appendChild(resources);
     const script = document.createElement("script");
     script.src = "/scripts/main.js";
     script.async = false;
     document.body.appendChild(script);
     return () => {
       script.remove();
+      resources.remove();
     };
   }, []);
 

@@ -712,16 +712,15 @@ if (document.readyState === "loading") {
 // =========================================================
 const ROLE_PROJECTS = {
   admin: [
-    { title: "Digitalisasi Arsip Dinas", tags: ["Google Sheets", "Kearsipan"], desc: "Menyusun ulang indeks arsip fisik ke spreadsheet terstruktur sehingga pencarian dokumen jauh lebih cepat.", url: "" },
-    { title: "Alur Buku Tamu Digital", tags: ["Google Forms", "Layanan"], desc: "Merancang formulir penerimaan tamu digital untuk mempercepat pencatatan dan rekap harian.", url: "" },
+    { title: "Digitalisasi Arsip Dinas", tags: ["Google Sheets", "Kearsipan"], desc: "Menyusun ulang indeks arsip fisik ke spreadsheet terstruktur sehingga pencarian dokumen jauh lebih cepat.", url: "", linkType: "drive" },
   ],
   data: [
     { title: "Final Project Bootcamp", tags: ["Python", "XGBoost", "SHAP"], desc: "Model prediksi dengan pendekatan CRISP-DM, dilengkapi interpretasi fitur menggunakan SHAP. Skor final project 90.", url: "" },
-    { title: "Dashboard Tableau", tags: ["Tableau", "Visualisasi"], desc: "Dashboard interaktif untuk membantu pengambilan keputusan berbasis data.", url: "" },
+    { title: "Mini Project Kalkulator", tags: ["Kalkulator", "Mini Project"], desc: "Mini project pembuatan kalkulator untuk melakukan perhitungan aritmetika dasar.", url: "", linkType: "github" },
   ],
   marketing: [
-    { title: "Riset Kompetitif LAZNAS", tags: ["SimilarWeb", "Google Trends"], desc: "Analisis presence digital LAZNAS Dewan Da'wah dibanding BAZNAS dan Rumah Zakat, dipakai sebagai dasar perbaikan strategi.", url: "" },
-    { title: "Kampanye JKN Future Shield", tags: ["Copywriting", "Meta Ads"], desc: "Konten dan dukungan iklan untuk kampanye deteksi fraud BPJS Kesehatan di Healthkathon 2026.", url: "" },
+    { title: "Riset Kompetitif LAZNAS", tags: ["SimilarWeb", "Google Trends"], desc: "Analisis presence digital LAZNAS Dewan Da'wah dibanding BAZNAS dan Rumah Zakat, dipakai sebagai dasar perbaikan strategi.", url: "", linkType: "drive" },
+    { title: "Kampanye JKN Future Shield", tags: ["Copywriting", "Meta Ads"], desc: "Konten dan dukungan iklan untuk kampanye deteksi fraud BPJS Kesehatan di Healthkathon 2026.", url: "", linkType: "drive" },
   ],
     "ai-automation": [
     {
@@ -766,15 +765,28 @@ function renderProjects() {
       p.tags.forEach((t) => { const s = document.createElement("span"); s.textContent = t; tags.appendChild(s); });
       const d = document.createElement("p"); d.textContent = p.desc;
       body.append(h, tags, d);
-      if (p.url) {
+      if (p.url || p.linkType) {
         const a = document.createElement("a");
-        a.className = "project-link"; a.href = p.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+        a.className = "project-link";
+        if (p.url) {
+          a.href = p.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+        } else {
+          a.setAttribute("role", "link");
+          a.setAttribute("aria-disabled", "true");
+          a.title = "Tautan belum ditambahkan";
+        }
         a.setAttribute("aria-label", "Kunjungi proyek " + p.title);
-        const gh = /github\.com/i.test(p.url);
+        const gh = p.linkType === "github" || /github\.com/i.test(p.url);
         a.innerHTML = (gh
           ? '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>'
           : '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>')
-          + '<span>' + (gh ? "Lihat di GitHub" : "Kunjungi Proyek") + '</span>';
+          + '<span>' + (p.linkType === "drive" ? "Lihat Bukti Kerja di Drive" : gh ? "Lihat di GitHub" : "Kunjungi Proyek") + '</span>';
+        if (!p.url) {
+          const status = document.createElement("small");
+          status.className = "project-link-status";
+          status.textContent = "Tautan belum tersedia";
+          body.appendChild(status);
+        }
         body.appendChild(a);
       }
       card.append(thumb, body);
@@ -804,3 +816,66 @@ function setupPanelTabs() {
 
 renderProjects();
 setupPanelTabs();
+
+// CVs and organisation logos are supplied by the route's CDN asset pointers.
+function setupPortfolioResources() {
+  const resourceElement = document.getElementById("portfolio-resources");
+  if (!resourceElement) return;
+  const resources = JSON.parse(resourceElement.textContent);
+  Object.entries(resources.cv).forEach(([role, asset]) => {
+    const panel = document.querySelector(`.role-card[data-role="${role}"] .detail-panel`);
+    const tabs = panel?.querySelector(".panel-tabs");
+    if (!panel || !tabs) return;
+    const actions = document.createElement("div");
+    actions.className = "cv-actions";
+    const link = document.createElement("a");
+    link.className = "footer-btn cv-download";
+    link.href = asset.url;
+    link.download = asset.original_filename;
+    link.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg><span>Download CV</span>';
+    const status = document.createElement("span");
+    status.className = "cv-status";
+    status.setAttribute("role", "status");
+    link.addEventListener("click", async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (link.getAttribute("aria-busy") === "true") return;
+      link.setAttribute("aria-busy", "true");
+      status.textContent = "Menyiapkan CV...";
+      try {
+        const response = await fetch(asset.url);
+        if (!response.ok) throw new Error("Download unavailable");
+        const url = URL.createObjectURL(await response.blob());
+        const download = document.createElement("a");
+        download.href = url;
+        download.download = asset.original_filename;
+        document.body.appendChild(download);
+        download.click();
+        download.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 30000);
+        status.textContent = "CV berhasil diunduh";
+      } catch {
+        status.textContent = "Unduhan gagal. Silakan coba lagi.";
+      } finally {
+        link.removeAttribute("aria-busy");
+      }
+    });
+    actions.append(link, status);
+    tabs.before(actions);
+  });
+  const grid = document.getElementById("organisation-logos");
+  if (!grid) return;
+  resources.logos.forEach(({ name, asset }) => {
+    const figure = document.createElement("figure");
+    figure.className = "organisation-logo";
+    const image = new Image();
+    image.src = asset.url;
+    image.alt = name;
+    image.loading = "lazy";
+    const label = document.createElement("figcaption");
+    label.textContent = name;
+    figure.append(image, label);
+    grid.appendChild(figure);
+  });
+}
+setupPortfolioResources();
