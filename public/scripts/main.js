@@ -444,6 +444,8 @@ roleCards.forEach((card, index) => {
     });
 
     navActions.append(prevBtn, backBtn, nextBtn);
+    const headerClose = header.querySelector(".close-btn");
+    if (headerClose) navActions.appendChild(headerClose);
     header.appendChild(navActions);
   }
   const openBtn = card.querySelector(".open-btn");
@@ -715,7 +717,7 @@ const ROLE_PROJECTS = {
     { title: "Digitalisasi Arsip Dinas", tags: ["Google Sheets", "Kearsipan"], desc: "Menyusun ulang indeks arsip fisik ke spreadsheet terstruktur sehingga pencarian dokumen jauh lebih cepat.", url: "", linkType: "drive" },
   ],
   data: [
-    { title: "Final Project Bootcamp", tags: ["Python", "XGBoost", "SHAP"], desc: "Model prediksi dengan pendekatan CRISP-DM, dilengkapi interpretasi fitur menggunakan SHAP. Skor final project 90.", url: "" },
+    { title: "Final Project Bootcamp", tags: ["Python", "XGBoost", "SHAP"], desc: "Model prediksi dengan pendekatan CRISP-DM, dilengkapi interpretasi fitur menggunakan SHAP. Skor final project 90.", url: "", linkType: "github" },
     { title: "Mini Project Kalkulator", tags: ["Kalkulator", "Mini Project"], desc: "Mini project pembuatan kalkulator untuk melakukan perhitungan aritmetika dasar.", url: "", linkType: "github" },
   ],
   marketing: [

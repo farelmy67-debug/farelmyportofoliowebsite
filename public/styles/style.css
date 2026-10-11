@@ -1861,10 +1861,13 @@ h1, h2, h3, h4, .firstpage-card h2 {
   flex-wrap: wrap;
 }
 
+.detail-header > div:first-child { flex: 1 1 360px; min-width: 0; }
+
 .detail-header-actions {
   flex-wrap: nowrap;
   gap: 8px;
   margin-left: auto;
+  max-width: 100%;
 }
 
 .detail-header-actions .close-btn { order: 3; margin-left: 6px; }
@@ -1939,7 +1942,7 @@ h1, h2, h3, h4, .firstpage-card h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 28px 0 8px;
+  margin: 28px auto 8px;
 }
 .panel-tabs button {
   flex: 1 1 220px;
@@ -1998,6 +2001,7 @@ h1, h2, h3, h4, .firstpage-card h2 {
   font-size: 0.85rem;
   text-decoration: none;
   transition: background 0.25s ease, color 0.25s ease;
+  max-width: 100%;
 }
 .project-link:hover { background: var(--gold); color: #05070d; }
 .credential-pdf { display: grid; place-items: center; gap: 8px; color: var(--gold); min-height: 160px; font-weight: 600; font-size: 0.85rem; }
