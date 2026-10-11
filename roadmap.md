@@ -1,7 +1,11 @@
 # Portfolio updates
+- [ ] Fix the detail panel layout bug shown in the screen recording.
+- [ ] Add a GitHub button to the Data Science final project, without inventing a URL.
+- [ ] Replace seven organisation logos and add EIE Private Course and Sudin Pendidikan Wilayah I Jakarta Barat.
+- [ ] Verify the updated panel and organisation logos in the live portfolio.
 - [x] Add the four uploaded CV downloads to their matching roles.
 - [x] Update Admin, Data and Marketing projects and future external evidence links.
 - [x] Match main role outlines to project outline colours.
 - [x] Add the supplied organisation logos below supplemental roles.
 - [x] Verify downloads, projects and layout in the live portfolio.
-- [ ] Activate evidence and calculator links once the user provides Google Drive and GitHub URLs.
+- [ ] Activate evidence, calculator and Data Science final project links once the user provides Google Drive and GitHub URLs.
