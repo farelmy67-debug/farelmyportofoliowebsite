@@ -1,8 +1,9 @@
 # Portfolio updates
-- [ ] Fix the detail panel layout bug shown in the screen recording.
+- [x] Fix the detail panel layout bug shown in the screen recording.
 - [ ] Add a GitHub button to the Data Science final project, without inventing a URL.
-- [ ] Replace seven organisation logos and add EIE Private Course and Sudin Pendidikan Wilayah I Jakarta Barat.
-- [ ] Verify the updated panel and organisation logos in the live portfolio.
+- [x] Replace seven organisation logos and add EIE Private Course and Sudin Pendidikan Wilayah I Jakarta Barat.
+- [x] Verify the updated panel and organisation logos in the live portfolio.
+- [x] Add seven more organisation logos, with Enjoy Jakarta labelled Sudin Parekraf Jakarta Barat.
 - [x] Add the four uploaded CV downloads to their matching roles.
 - [x] Update Admin, Data and Marketing projects and future external evidence links.
 - [x] Match main role outlines to project outline colours.
